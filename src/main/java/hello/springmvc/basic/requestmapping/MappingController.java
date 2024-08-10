@@ -27,6 +27,7 @@ public class MappingController {
     
 
   /**
+   * HTTP 메서드 매핑
    * method 특정 HTTP 메서드 요청만 허용
    * GET, HEAD, POST, PUT, PATCH, DELETE
    * http://localhost:8080/mapping-get-v1
@@ -37,15 +38,16 @@ public class MappingController {
   return "ok";
   }
 
-    /**
- * 편리한 축약 애노테이션 (코드보기)
- * @GetMapping
- * @PostMapping
- * @PutMapping
- * @DeleteMapping
- * @PatchMapping
- * http://localhost:8080/mapping-get-v2
- */
+  /**
+   * HTTP 메서드 매핑 축약
+   * 편리한 축약 애노테이션 (코드보기)
+   * @GetMapping
+   * @PostMapping
+   * @PutMapping
+   * @DeleteMapping
+   * @PatchMapping
+   * http://localhost:8080/mapping-get-v2
+   */
   @GetMapping(value = "/mapping-get-v2")
   public String mappingGetV2() {
   log.info("mapping-get-v2");
@@ -67,13 +69,12 @@ public class MappingController {
   }
     
   /**
-   * PathVariable 사용 다중
+   * PathVariable (경로 변수) 사용 다중
    * http://localhost:8080//mapping/users/{userId}/orders/{orderId}
-   * http://localhost:8080/mapping/users/userA/orders/100
+   * http://localhost:8080//mapping/users/userA/orders/100
    */
   @GetMapping("/mapping/users/{userId}/orders/{orderId}")
-  public String mappingPath(@PathVariable String userId, @PathVariable Long
-  orderId) {
+  public String mappingPath(@PathVariable String userId, @PathVariable Long orderId) {
   log.info("mappingPath userId={}, orderId={}", userId, orderId);
   return "ok";
   }
