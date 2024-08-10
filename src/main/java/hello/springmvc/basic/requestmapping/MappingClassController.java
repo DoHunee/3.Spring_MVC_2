@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 public class MappingClassController {
 
      
+    // 회원 목록 조회
     // GET /mapping/users
     // http://localhost:8080/mapping/users
     @GetMapping
@@ -23,6 +24,7 @@ public class MappingClassController {
         return "get users";
     }
 
+    // 회원 등록
     // POST /mapping/users
     // http://localhost:8080/mapping/users
     @PostMapping
@@ -30,6 +32,7 @@ public class MappingClassController {
         return "post user";
     }
 
+    // 회원 조회
     // GET /mapping/users/{userId}
     // http://localhost:8080/mapping/users/1
     @GetMapping("/{userId}")
@@ -37,6 +40,7 @@ public class MappingClassController {
         return "get userId=" + userId;
     }
 
+    // 회원 수정
     // PATCH /mapping/users/{userId}
     // http://localhost:8080/mapping/users/1
     @PatchMapping("/{userId}")
@@ -44,6 +48,7 @@ public class MappingClassController {
         return "update userId=" + userId;
     }
 
+    // 회원 삭제
     // DELETE /mapping/users/{userId}
     // http://localhost:8080/mapping/users/1
     @DeleteMapping("/{userId}")
