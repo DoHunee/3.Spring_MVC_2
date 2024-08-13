@@ -23,6 +23,7 @@ public class RequestParamController {
      *
      * @ResponseBody 가 없으면서 응답의 결과를 HTTP 메시지 바디에 직접 담아서 전달하는 역할을 한다.
      * http://localhost:8080/request-param-v1?username=hello&age=20
+     * http://localhost:8080/basic/hello-form.html
      */
     @RequestMapping("/request-param-v1")
     public void requestParamV1(HttpServletRequest request, HttpServletResponse response) throws IOException {
